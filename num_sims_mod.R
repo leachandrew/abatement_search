@@ -178,7 +178,8 @@ res_tech_plot<-function(file_sent="res_tech_plot.png",width_sent=8,height_sent=5
     geom_function(aes(color="Lower \u03B8, low tax",lty="Lower \u03B8, low tax"),fun=res_tech,args=list(theta=theta_low,tau_sent=tau_sent),size=rel(1.25))+
     geom_point(aes(x=0,y = theta_high),size=rel(2.25))+
     geom_text_repel(data = tibble(1),aes(x=0,y=theta_high),label=str_wrap("Original value, higher \u03B8",45),nudge_x = 2000,min.segment.length =0,size=rel(2.5) )+
-    geom_text_repel(data = tibble(1),aes(x=0,y=theta_low),label=str_wrap("Original value, lower \u03B8",45),nudge_x = 2000,min.segment.length =0,size=rel(2.5),color="grey50" )+scale_y_continuous(breaks=pretty_breaks(),expand=c(0,0))+
+    geom_text_repel(data = tibble(1),aes(x=0,y=theta_low),label=str_wrap("Original value, lower \u03B8",45),nudge_x = 2000,min.segment.length =0,size=rel(2.5),color="black" )+
+    scale_y_continuous(breaks=pretty_breaks(),expand=c(0,0))+
     scale_x_continuous(breaks=pretty_breaks(),expand=c(0,0))+
     expand_limits(x=c(0,10000))+
     expand_limits(y=c(0,theta_high*1.1))+
